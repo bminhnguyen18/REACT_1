@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        
+        /* ********** Start big part: Question 2 ********** */
+        
+        var arr=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+        var default_count = 1;
+        var present_count = 0;
+        var item;
+        for (var i=0; i<arr.length; i++)
+        {
+                for (var j=i; j<arr.length; j++)
+                {
+                    if (arr[i] == arr[j])
+                    present_count++;
+                    if (default_count<present_count)
+                    {
+                    default_count=present_count; 
+                    item = arr[i];
+                    }
+                }
+                present_count=0;
+        }
+        console.log(item+" ( " +default_count +" times ) ") ;
+        document.write(" Question 2: " +item+" ( " +default_count +" times ) ");
+        /* xxxxxxxxxx End big part: Question 2 xxxxxxxxxx */
+        
+        
+    </script>
+    <br>
+    <script>
+        /* ********** Start big part: Question 3 ********** */
+        
+        var library = [
+            {
+                title: 'Bill Gates',
+                author: 'The Road Ahead',
+                readingStatus: true
+            },
+            {
+                title: 'Steve Jobs',
+                author: 'Walter Isaacson',
+                readingStatus: true
+            },
+            {
+                title: 'Mockingjay: The Final Book of The Hunger Games',
+                author: 'Suzanne Collins',
+                readingStatus: false
+            }];
+
+        for (var i = 0; i < library.length; i++)
+            {
+                var book = "'" + library[i].title + "'" + ' by ' + library[i].author + ".";
+                if (library[i].readingStatus) {
+                console.log("Already read " + book);
+                document.write(" Question 3: " +"Already read " + book);
+                } else
+                {
+                console.log("You still need to read " + book);
+                document.write(" Question 3: " +"You still need to read " + book);
+                }
+            }
+        
+        /* xxxxxxxxxx End big part: Question 3 xxxxxxxxxx */
+        
+    </script>
+    
+</body>
+</html>
