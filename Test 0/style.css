@@ -1,0 +1,106 @@
+*{}
+
+/* ********** Start big part: setting common ********** */
+
+body {
+    background: #ffffff;
+    margin: 0;
+    font-family: arial;
+    color: black;
+}
+
+.container  {
+    /* max-width: 1170px; */
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+li {
+    list-style: none;
+}
+
+/* xxxxxxxxxx End big part: setting common xxxxxxxxxx */
+
+/* ********** Start big part: main setting ********** */
+
+
+/* ---------- Start small part: Setting header ---------- */
+.header h1 {
+    background: #ff00189e;
+    padding: 39px;
+    margin: 0;
+    color: #ffffff;
+    text-align: center;
+    font-size: 40px;
+    font-family: cursive;
+}
+/* ========== End small part: Setting header ========== */
+
+/* ---------- Start small part: content ---------- */
+.content {
+    padding: 40px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.content .flexbox_colums_tabs {
+    /* display: flex; */
+    flex-direction: column;
+    width: 10%;
+    display: inline-block;
+    clear: both;
+    /* padding: 0; */
+    /* margin: 0; */
+}
+
+.content .flexbox_colums_tabs .flexbox_colum p {
+    background: #d6d6d6;
+    padding: 25px 25px;
+    margin-bottom: 5px;
+    margin-top: 0;
+    text-align: center;
+}
+
+.content .flexbox_colums_tabs .flexbox_colum p.active {
+    background: #b3b3b3;
+}
+
+.content .flexbox_colums_tabs .flexbox_colum a {
+    text-decoration: none;
+}
+
+.content .flexbox_rows_tab_detail {
+    /* display: flex; */
+    float: right;
+    clear: both;
+    display: inline-block;
+    width: 90%;
+    /* padding: 0; */
+    /* margin: 0; */
+    background: #b3b3b3;
+}
+
+.content .flexbox_rows_tab_detail .flexbox_row {
+    width: 30%;
+    display: inline-block;
+    background: #b3b3b3;
+    padding: 0 1.5%;
+}
+
+.content .flexbox_rows_tab_detail p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+.content .flexbox_rows_tab_detail .flexbox_row h2 {
+    color: #ff00189e;
+    font-weight: bold;
+}
+/* ========== End small part: content ========== */
+
+
+/* xxxxxxxxxx End big part: main setting xxxxxxxxxx */
