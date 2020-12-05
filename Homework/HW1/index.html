@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO</title>
+
+    <!-- ---------- Start small part: link CSS ---------- -->
+    <link rel="stylesheet" href="style.css">
+    <!-- ========== End small part: link CSS ========== -->
+
+</head>
+<body>
+    <div class="container">
+        <div class="paper">
+            <div class="add_new">
+                <p>
+                    <input id="new-task" type="text" placeholder="What need to be done?"><button>Add</button>
+                </p>
+            </div>
+
+            <ul id="completed-tasks">
+                <li><input type="checkbox" checked>
+                    <label>This thing</label>
+                    <input type="text">
+                    <button class="edit">Edit</button>
+                    <button class="delete">Delete</button>
+                </li>
+            </ul>
+
+            <ul id="incomplete-tasks">
+                <li>
+                    <input type="checkbox">
+                    <label>That thing</label>
+                    <input type="text">
+                    <button class="edit">Edit</button>
+                    <button class="delete">Delete</button>
+                </li>
+
+                <li>
+                    <input type="checkbox">
+                    <label>More</label>
+                    <input type="text">
+                    <button class="edit">Edit</button>
+                    <button class="delete">Delete</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript" src="setting.js"></script>
+</body>
+</html>
