@@ -1,0 +1,88 @@
+*{}
+
+/* ********** Start big part: setting common ********** */
+
+body {
+    background: #ffffff;
+    margin: 0;
+    font-family: sans-serif;
+    color: #009788;
+}
+
+.container  {
+    max-width: 1170px;
+    margin: 0 auto;
+    /* padding: 0; */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+li {
+    list-style: none;
+}
+
+/* xxxxxxxxxx End big part: setting common xxxxxxxxxx */
+
+/* ********** Start big part: Equal-height elements setting ********** */
+
+.Equal_height_elements {
+    width: 872px;
+    height: 494px;
+    margin: 0 auto;
+    background-color: #009788;
+    border-radius: 5px;
+}
+
+.Equal_height_elements .element_list {
+    padding: 64px 48px;
+}
+
+.Equal_height_elements .element_list .one_element {
+    /* width: 242.67px; */
+    width: 30%;
+    height: 366px;
+    background-color: #ffffff;
+    display: inline-block;
+    margin: 0 8px;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.Equal_height_elements .element_list .one_element h2 {
+    margin-top: 0px;
+    margin-bottom: 16px;
+    font-family: 'Circular Medium', sans-serif;
+    font-size: 1.25em;
+    line-height: 1.3em;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.Equal_height_elements .element_list .one_element p {
+    margin-bottom: 10px;
+    font-size: 0.875em;
+    line-height: 1.5em;
+}
+
+.one_element .content {
+    padding: 0 10px;
+}
+
+.one_element .element_picture {
+    width: 100%;
+    height: 180px;
+    background-color: #b1dfdb;
+}
+
+.one_element .element_picture p {
+    padding: 50px 0 0;
+    margin: 0;
+    text-align: center;
+}
+
+/* xxxxxxxxxx End big part: Equal-height elements setting xxxxxxxxxx */
