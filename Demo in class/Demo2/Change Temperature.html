@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Temperature</title>
+</head>
+<body>
+    <script>
+        function cToF(C_degrees)
+            {
+                var C = C_degrees;
+                var CtoF = C * 9 / 5 + 32;
+                var F_result = C+'&deg;C is ' + CtoF + ' &deg;F.';
+                console.log(F_result);
+                document.writeln(C+'&deg;C is ' + CtoF + ' &deg;F.');
+            }
+
+            function FtoC(F_degrees)
+            {
+                var F = F_degrees;
+                var Fel = (F - 32) * 5 / 9;
+                var C_result = F+'&deg;F is ' + Fel + '&deg;C.';
+                console.log(C_result);
+                document.writeln(F+'&deg;F is ' + Fel + '&deg;C.');
+            }
+            cToF(25);
+            FtoC(157);
+    </script>
+</body>
+</html>
