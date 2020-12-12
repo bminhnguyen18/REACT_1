@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random hexadecimal color code</title>
+</head>
+<body>
+    <script>
+        const Color = () => {
+        let n = (Math.random() * 0xfffff * 1000000).toString(16);
+        return '#' + n.slice(0, 6);
+        };
+
+        console.log(Color());
+        document.body.style.background =(Color());
+        document.writeln(Color());
+    </script>
+</body>
+</html>
