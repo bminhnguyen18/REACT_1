@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript functions - Exercises, Practice, Solution</title>
+</head>
+<body>
+    
+    <!-- ********** Start big part: Exe_1********** -->
+    <div class="exe_1">
+        <script>
+            function reverse(a)
+                {
+                    a = a + "";
+                    return a.split("").reverse().join("");
+                }
+                var a=32243;
+                console.log(reverse(a));
+                document.writeln("Exe 1:");
+                document.writeln("reverse of "+ a +" is "+reverse(a));
+        </script>
+    </div>
+
+    <!-- xxxxxxxxxx End big part: Exe_1  xxxxxxxxxx -->
+    
+    <!-- ********** Start big part: Exe_3 ********** -->
+    
+    <div class="exe_3">
+        <script>
+            function substrings(str1)
+                {
+                    var array1 = [];
+                    for (var x = 0, y=1; x < str1.length; x++,y++)
+                        {
+                            array1[x]=str1.substring(x, y);
+                        }
+                    var A = [];
+                    var B= "";
+                    var C = Math.pow(2, array1.length);
+
+                    for (var i = 0; i < C ; i++)
+                    {
+                        B= "";
+                        for (var j=0;j<array1.length;j++)
+                            {
+                                if ((i & Math.pow(2,j)))
+                                    {
+                                        B += array1[j];
+                                    }
+                            }
+                        if (B !== "")
+                            {
+                                A.push(B);
+                            }
+                    }
+                    console.log(A.join("\n"));
+                    document.writeln("Exe 3:");
+                    document.writeln(A.join(",\n"));
+                }
+
+                substrings("dog");
+        </script>
+    </div>
+    
+    <!-- xxxxxxxxxx End big part: Exe_3 xxxxxxxxxx -->
+    
+    
+    <!-- ********** Start big part: Exe_4 ********** -->
+    
+    <div class="exe_4">
+        <script>
+            function exe_4(str)
+                {
+                return str.split('').sort().join('');
+                }
+                console.log(exe_4("webmaster"));
+                document.writeln("Exe 4:");
+                document.writeln(exe_4("webmaster"));
+        </script>
+    </div>
+    
+    <!-- xxxxxxxxxx End big part: Exe_4 xxxxxxxxxx -->
+    
+    
+    <!-- ********** Start big part: Exe_5 ********** -->
+    
+    <div class="exe_5">
+        <script>
+            function uppercase(str)
+                {
+                    var array1 = str.split(' ');
+                    var newarray1 = [];
+                    for(var x = 0; x < array1.length; x++){
+                        newarray1.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1));
+                    }
+                    return newarray1.join(' ');
+                }
+                console.log(uppercase("the quick brown fox"));
+                document.writeln("Exe 5:");
+                document.writeln(uppercase("the quick brown fox"));
+        </script>
+    </div>
+    
+    <!-- xxxxxxxxxx End big part: Exe_5 xxxxxxxxxx -->
+    
+    
+    <!-- ********** Start big part: Exe_6 ********** -->
+    
+    <div class="exe_6">
+        <script>
+            function Longest(str)
+                {
+                    var array1 = str.match(/\w[a-z]{0,}/gi);
+                    var result = array1[0];
+
+                    for(var x = 1 ; x < array1.length ; x++)
+                        {
+                            if(result.length < array1[x].length)
+                            {
+                            result = array1[x];
+                            } 
+                        }
+                    return result;
+                }
+                console.log(Longest('Web Development Tutorial'));
+                document.writeln("Exe 6:");
+                document.writeln(Longest('Web Development Tutorial'));
+        </script>
+    </div>
+    
+    <!-- xxxxxxxxxx End big part: Exe_6 xxxxxxxxxx -->
+    
+    
+    <!-- ********** Start big part: Exe_7 ********** -->
+    
+    <div class="exe_7">
+        <script>
+            function input_Arr(str1)
+                {
+                    var ar_list = 'aeiouAEIOU';
+                    var ar_count = 0;
+                    for(var x = 0; x < str1.length ; x++)
+                        {
+                            if (ar_list.indexOf(str1[x]) !== -1)
+                            {
+                            ar_count += 1;
+                            }
+                        }
+                    return ar_count;
+                }
+            console.log(input_Arr("The quick brown fox"));
+            document.writeln("Exe 7:");
+            document.writeln(input_Arr("The quick brown fox"));
+        </script>
+    </div>
+    
+    <!-- xxxxxxxxxx End big part: Exe_7 xxxxxxxxxx -->
+    
+    
+    <!-- ********** Start big part: Exe_8 ********** -->
+    
+    <div class="exe_8">
+        <script>
+            function kiem_tra_snt(n)
+            {
+                var flag = true;
+                // Nếu n bé hơn 2 tức là không phải số nguyên tố
+                if (n < 2){
+                    flag = false;
+                }
+
+                // 2 là số nguyên tố duy nhất chẵn
+                else if (n == 2){
+                    flag = true;
+                }
+
+                // Những số chẵn khác không phải là số nguyên tố
+                else if (n % 2 == 0){
+                    flag = false;
+                }
+
+                // bắt đầu vòng lặp với các số lẻ
+                else{
+                    // lặp từ 3 tới n-1 với bước nhảy là 2 (i+=2)
+                    // từ 2 đến căn bậc hai của n sẽ không tồn tại số mà n chia hết
+                    for (var i = 3; i < Math.sqrt(n); i+=2)
+                    {
+                        if (n % i == 0){
+                            flag = false;
+                            break;
+                        }
+                    }
+                }
+                // Kiểm tra biến flag
+                if (flag == true){
+                    console.log(n + " là số nguyên tố <br/>")
+                    document.write(n + " là số nguyên tố <br/>");
+                }
+                else{
+                    console.log(n + " không phải là số nguyên tố <br/>")
+                    document.write(n + " không phải là số nguyên tố <br/>");
+                }
+            }
+            document.writeln("Exe 8:<br/>");
+            kiem_tra_snt(1);
+            kiem_tra_snt(2);
+            kiem_tra_snt(3);
+            kiem_tra_snt(4);
+            kiem_tra_snt(5);
+            kiem_tra_snt(37);
+
+        </script>
+    </div>
+    
+    <!-- xxxxxxxxxx End big part: Exe_8 xxxxxxxxxx -->
+    
+    
+    <!-- ********** Start big part: Exe_9 ********** -->
+    
+    <div class="exe_9">
+        <script>
+            function detect_data_type(value)
+                {
+                var type = [Function, RegExp, Number, String, Boolean, Object], x, len;
+                if (typeof value === "object" || typeof value === "function") 
+                    {
+                    for (x = 0, len = type.length; x < len; x++) 
+                    {
+                            if (value instanceof type[x])
+                            {
+                                return type[x];
+                            }
+                    }
+                    }
+                    return typeof value;
+                }
+            console.log(detect_data_type(12));
+            console.log(detect_data_type('w3resource'));
+            console.log(detect_data_type(false));
+            document.writeln("Exe 9:<br/>");
+            document.writeln("12 is " + detect_data_type(12)+"<br/>");
+            document.writeln("w3resource is " + detect_data_type('w3resource')+"<br/>");
+            document.writeln("false is " + detect_data_type(false)+"<br/>");
+        </script>
+    </div>
+    
+    <!-- xxxxxxxxxx End big part: Exe_9 xxxxxxxxxx -->
+    
+    
+    <!-- ********** Start big part: Exe_12 ********** -->
+    
+    <div class="exe_12">
+        <script>
+            function check(number)
+                {
+                var a_check = 0;
+                for(var i=1;i<=number/2;i++)
+                    {
+                        if(number%i === 0)
+                        {
+                            a_check += i;
+                        }
+                    }
+                
+                    if(a_check === number && a_check !== 0)
+                        {
+                            console.log(number + " is a perfect number.");
+                            document.writeln( number + " is a perfect number. <br/>");
+                        }
+                    else
+                        {
+                            console.log(number + " is not a perfect number.");
+                            document.writeln(number + " is not a perfect number. <br/>");
+                        }
+                }
+            document.writeln("Exe 12:<br/>");
+            check(28);
+            check(25);
+        </script>
+    </div>
+    
+    <!-- xxxxxxxxxx End big part: Exe_12 xxxxxxxxxx -->
+    
+</body>
+</html>
